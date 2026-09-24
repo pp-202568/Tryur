@@ -1,0 +1,1830 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            thai: ["Noto Sans Thai", "sans-serif"]
+          },
+
+          colors: {
+            primary: "#7C6CF2",
+            pink: "#FF8FB1",
+            yellow: "#FFD166",
+            sky: "#72D6FF",
+            mint: "#8FE3CF"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+
+    html {
+    }
+
+    /* =========================
+       Card Hover
+    ========================= */
+
+    .cute-card {
+      transition: all 0.3s ease;
+    }
+
+    .cute-card:hover {
+      transform: translateY(-8px) rotate(0.5deg);
+      box-shadow: 0 20px 40px rgba(124,108,242,0.15);
+    }
+
+    /* =========================
+       Skill Bar
+    ========================= */
+
+    .skill-bar {
+      overflow: hidden;
+      border-radius: 999px;
+    }
+
+  </style>
+
+</head>
+
+
+<body class="bg-[#FAF9FF] text-slate-700">
+
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+
+  <header
+    id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  >
+
+    <nav
+      class="max-w-7xl mx-auto px-5 lg:px-8 py-4
+             flex items-center justify-between"
+    >
+
+      <!-- Logo -->
+
+      <a
+        href="#home"
+        class="flex items-center gap-3"
+      >
+
+        <div
+          class="w-11 h-11 rounded-2xl
+                 bg-gradient-to-br from-primary to-pink
+                 text-white font-extrabold
+                 flex items-center justify-center
+                 shadow-lg"
+        >
+          ME
+        </div>
+
+        <span
+          class="font-extrabold text-lg text-slate-800"
+        >
+          My Portfolio
+        </span>
+
+      </a>
+
+
+      <!-- Desktop Menu -->
+
+      <div
+        class="hidden md:flex items-center gap-8
+               font-semibold text-sm"
+      >
+
+        <a
+          href="#home"
+          class="hover:text-primary transition"
+        >
+          Home
+        </a>
+
+        <a
+          href="#about"
+          class="hover:text-primary transition"
+        >
+          About
+        </a>
+
+        <a
+          href="#skills"
+          class="hover:text-primary transition"
+        >
+          Skills
+        </a>
+
+        <a
+          href="#projects"
+          class="hover:text-primary transition"
+        >
+          Projects
+        </a>
+
+        <a
+          href="#contact"
+          class="hover:text-primary transition"
+        >
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Button -->
+
+      <button
+        id="menuBtn"
+        class="md:hidden p-2 rounded-xl
+               hover:bg-white"
+        aria-label="เปิดเมนู"
+      >
+
+        <svg
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+
+          <path
+            id="menuIcon"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+
+        </svg>
+
+      </button>
+
+    </nav>
+
+
+    <!-- Mobile Menu -->
+
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden
+             bg-white/95 backdrop-blur-md
+             border-t px-5 pb-5"
+    >
+
+      <a
+        href="#home"
+        class="mobile-link block py-3 font-semibold"
+      >
+        Home
+      </a>
+
+      <a
+        href="#about"
+        class="mobile-link block py-3 font-semibold"
+      >
+        About
+      </a>
+
+      <a
+        href="#skills"
+        class="mobile-link block py-3 font-semibold"
+      >
+        Skills
+      </a>
+
+      <a
+        href="#projects"
+        class="mobile-link block py-3 font-semibold"
+      >
+        Projects
+      </a>
+
+      <a
+        href="#contact"
+        class="mobile-link block py-3 font-semibold"
+      >
+        Contact
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      id="home"
+      class="min-h-screen hero-bg
+             relative overflow-hidden
+             flex items-center pt-24"
+    >
+
+      <!-- Decorative Shapes -->
+
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+
+
+      <div
+        class="relative max-w-7xl mx-auto
+               px-5 lg:px-8 py-16
+               grid lg:grid-cols-2
+               gap-12 items-center"
+      >
+
+        <!-- Text -->
+
+        <div class="reveal">
+
+          <div
+            class="inline-flex items-center gap-2
+                   px-4 py-2
+                   bg-white rounded-full
+                   shadow-sm text-sm
+                   font-semibold text-primary"
+          >
+
+            ✨ Welcome to my portfolio
+
+          </div>
+
+
+          <!-- แก้ไขชื่อ -->
+
+          <h1
+            class="mt-6 text-5xl sm:text-6xl lg:text-7xl
+                   font-extrabold
+                   leading-tight text-slate-800"
+          >
+
+            สวัสดีค่ะ👋
+
+            <span
+              class="block
+                     bg-gradient-to-r
+                     from-primary
+                     via-pink
+                     to-sky
+                     bg-clip-text
+                     text-transparent"
+            >
+
+              ปวรวรรณรัตน์ ไพรบำรุง
+
+            </span>
+
+          </h1>
+
+
+          <p
+            class="mt-6 text-xl
+                   font-semibold text-slate-600"
+          >
+
+            Student 🌷
+
+          </p>
+
+
+          <p
+            class="mt-5 max-w-xl
+                   text-slate-500
+                   leading-8"
+          >
+
+            Portfolio ของนักเรียนชั้น ม.3
+            ที่รวบรวมประวัติ ทักษะ ผลงาน
+            กิจกรรม และเป้าหมายในการศึกษาต่อ
+            พร้อมก้าวไปสู่ประสบการณ์ใหม่ ๆ ในอนาคต
+
+          </p>
+
+
+          <!-- Buttons -->
+
+          <div
+            class="mt-8 flex flex-wrap gap-4"
+          >
+
+            <a
+              href="#projects"
+              class="px-7 py-3.5
+                     rounded-2xl
+                     bg-gradient-to-r
+                     from-primary to-pink
+                     text-white font-bold
+                     shadow-lg
+                     hover:scale-105
+                     transition"
+            >
+
+              ดูผลงานของฉัน ✨
+
+            </a>
+
+
+            <a
+              href="#about"
+              class="px-7 py-3.5
+                     rounded-2xl
+                     bg-white
+                     text-primary
+                     font-bold
+                     shadow-md
+                     hover:scale-105
+                     transition"
+            >
+
+              รู้จักฉัน 💜
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Profile -->
+
+        <div
+          class="reveal
+                 flex justify-center lg:justify-end"
+        >
+
+          <div class="relative">
+
+
+            <!-- Main Image -->
+
+            <div
+              class="w-72 h-72 sm:w-96 sm:h-96
+                     rounded-[3rem]
+                     overflow-hidden
+                     bg-white
+                     p-3
+                     shadow-2xl
+                     rotate-2"
+            >
+
+              <!-- เปลี่ยนรูปตรงนี้ -->
+
+              <img
+                src="pic/Screenshot_20260809_141217_PDF Scanner App.jpg"
+                alt="รูปโปรไฟล์"
+                class="w-full h-full
+                       object-cover
+                       rounded-[2.5rem]"
+              >
+
+            </div>
+
+
+            <!-- Cute Badge -->
+
+            <div
+              class="absolute -bottom-5 -left-8
+                     px-5 py-3
+                     bg-white
+                     rounded-2xl
+                     shadow-xl
+                     font-bold
+                     text-primary"
+            >
+
+              🌟 Keep Growing!
+
+            </div>
+
+
+            <div
+              class="absolute -top-5 -right-5
+                     w-16 h-16
+                     bg-yellow
+                     rounded-2xl
+                     flex items-center
+                     justify-center
+                     text-2xl
+                     rotate-12
+                     shadow-lg"
+            >
+
+              💡
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+      id="about"
+      class="py-24 bg-white"
+    >
+
+      <div
+        class="max-w-7xl mx-auto
+               px-5 lg:px-8"
+      >
+
+        <div
+          class="text-center reveal"
+        >
+
+          <span
+            class="px-4 py-2
+                   rounded-full
+                   bg-purple-100
+                   text-primary
+                   text-sm
+                   font-bold"
+          >
+
+            ABOUT ME
+
+          </span>
+
+
+          <h2
+            class="mt-5 text-4xl
+                   font-extrabold text-slate-800"
+          >
+
+            เกี่ยวกับฉัน 🌸
+
+          </h2>
+
+        </div>
+
+
+        <div
+          class="mt-14
+                 grid lg:grid-cols-2
+                 gap-12 items-center"
+        >
+
+
+          <!-- About Image -->
+
+          <div class="reveal">
+
+            <img
+              src="pic/20260809_083008.jpg"
+              alt="About Me"
+              class="w-full rounded-[2rem]
+                     shadow-lg"
+            >
+
+          </div>
+
+
+          <!-- About Text -->
+
+          <div class="reveal">
+
+            <h3
+              class="text-2xl font-bold
+                     text-primary"
+            >
+
+              Let me introduce myself! 💕
+
+            </h3>
+
+
+            <p
+              class="mt-5
+                     leading-8
+                     text-slate-600"
+            >
+
+              ฉันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 3
+              ที่ชอบเรียนรู้สิ่งใหม่ ๆ
+              สนใจทั้งด้านวิชาการ เทคโนโลยี
+              ความคิดสร้างสรรค์ และกิจกรรมต่าง ๆ
+
+            </p>
+
+
+            <p
+              class="mt-4
+                     leading-8
+                     text-slate-600"
+            >
+
+              ฉันเชื่อว่าการเรียนรู้ไม่ได้มีแค่ในห้องเรียน
+              แต่ยังเกิดจากการลงมือทำ การทำงานร่วมกับเพื่อน
+              และการลองสิ่งใหม่ ๆ
+              ซึ่งช่วยให้ฉันค้นพบความสามารถของตัวเองมากขึ้น
+
+            </p>
+
+
+            <!-- Info -->
+
+            <div
+              class="mt-8 grid sm:grid-cols-2 gap-4"
+            >
+
+              <div
+                class="p-5 rounded-2xl
+                       bg-purple-50"
+              >
+
+                🎓
+
+                <p
+                  class="mt-2 text-sm
+                         text-slate-500"
+                >
+                  Education
+                </p>
+
+                <p
+                  class="font-bold text-primary"
+                >
+                  มัธยมศึกษาปีที่ 3
+                </p>
+
+              </div>
+
+
+              <div
+                class="p-5 rounded-2xl
+                       bg-pink-50"
+              >
+
+                🎨
+
+                <p
+                  class="mt-2 text-sm
+                         text-slate-500"
+                >
+                  Hobby
+                </p>
+
+                <p
+                  class="font-bold text-pink-500"
+                >
+                  พัฒนาทักษะที่อยากทำให้ได้
+                </p>
+
+              </div>
+
+
+              <div
+                class="p-5 rounded-2xl
+                       bg-yellow-50"
+              >
+
+                ⭐
+
+                <p
+                  class="mt-2 text-sm
+                         text-slate-500"
+                >
+                  Goal
+                </p>
+
+                <p
+                  class="font-bold text-yellow-600"
+                >
+                  พัฒนาตัวเองให้ทำตามเป้าหมายได้สำเร็จ
+                </p>
+
+              </div>
+
+
+              <div
+                class="p-5 rounded-2xl
+                       bg-sky-50"
+              >
+
+                💻
+
+                <p
+                  class="mt-2 text-sm
+                         text-slate-500"
+                >
+                  Interest
+                </p>
+
+                <p
+                  class="font-bold text-sky-600"
+                >
+                  Science
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
+    <section
+      id="skills"
+      class="py-24
+             bg-gradient-to-br
+             from-purple-50
+             via-pink-50
+             to-sky-50"
+    >
+
+      <div
+        class="max-w-7xl mx-auto
+               px-5 lg:px-8"
+      >
+
+        <div class="text-center reveal">
+
+          <span
+            class="px-4 py-2
+                   rounded-full
+                   bg-white
+                   text-primary
+                   text-sm font-bold
+                   shadow-sm"
+          >
+
+            MY SKILLS
+
+          </span>
+
+
+          <h2
+            class="mt-5 text-4xl
+                   font-extrabold
+                   text-slate-800"
+          >
+
+            ทักษะของฉัน 💫
+
+          </h2>
+
+        </div>
+
+
+        <div
+          class="mt-14
+                 grid md:grid-cols-2
+                 lg:grid-cols-3 gap-6"
+        >
+
+
+          <!-- Skill 1 -->
+
+          <div
+            class="cute-card reveal
+                   bg-white
+                   p-7 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-4xl">
+              📚
+            </div>
+
+            <h3
+              class="mt-5 text-xl
+                     font-bold"
+            >
+              Science
+            </h3>
+
+            <p
+              class="mt-2 text-slate-500"
+            >
+              การเรียนรู้และเข้าใจหลักการทางวิทยาศาสตร์
+            </p>
+
+            <div
+              class="mt-5 h-3
+                     bg-slate-100
+                     skill-bar"
+            >
+
+              <div
+                class="h-full w-[85%]
+                       bg-gradient-to-r
+                       from-primary to-sky
+                       rounded-full"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Skill 2 -->
+
+          <div
+            class="cute-card reveal
+                   bg-white
+                   p-7 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-4xl">
+              💻
+            </div>
+
+            <h3
+              class="mt-5 text-xl
+                     font-bold"
+            >
+              ทักษะการเรียนรู้
+            </h3>
+
+            <p
+              class="mt-2 text-slate-500"
+            >
+              การค้นคว้าและพัฒนาความรู้ด้วยตัวเอง
+            </p>
+
+            <div
+              class="mt-5 h-3
+                     bg-slate-100
+                     skill-bar"
+            >
+
+              <div
+                class="h-full w-[75%]
+                       bg-gradient-to-r
+                       from-sky to-mint
+                       rounded-full"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Skill 3 -->
+
+          <div
+            class="cute-card reveal
+                   bg-white
+                   p-7 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-4xl">
+              🎨
+            </div>
+
+            <h3
+              class="mt-5 text-xl
+                     font-bold"
+            >
+              Creativity
+            </h3>
+
+            <p
+              class="mt-2 text-slate-500"
+            >
+              การออกแบบและคิดไอเดียใหม่ ๆ
+            </p>
+
+            <div
+              class="mt-5 h-3
+                     bg-slate-100
+                     skill-bar"
+            >
+
+              <div
+                class="h-full w-[90%]
+                       bg-gradient-to-r
+                       from-pink to-yellow
+                       rounded-full"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Skill 4 -->
+
+          <div
+            class="cute-card reveal
+                   bg-white
+                   p-7 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-4xl">
+              🤝
+            </div>
+
+            <h3
+              class="mt-5 text-xl
+                     font-bold"
+            >
+              Teamwork
+            </h3>
+
+            <p
+              class="mt-2 text-slate-500"
+            >
+              การทำงานร่วมกับผู้อื่น
+            </p>
+
+            <div
+              class="mt-5 h-3
+                     bg-slate-100
+                     skill-bar"
+            >
+
+              <div
+                class="h-full w-[90%]
+                       bg-gradient-to-r
+                       from-primary to-pink
+                       rounded-full"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Skill 5 -->
+
+          <div
+            class="cute-card reveal
+                   bg-white
+                   p-7 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-4xl">
+              🗣️
+            </div>
+
+            <h3
+              class="mt-5 text-xl
+                     font-bold"
+            >
+              Communication
+            </h3>
+
+            <p
+              class="mt-2 text-slate-500"
+            >
+              การสื่อสารและการนำเสนอ
+            </p>
+
+            <div
+              class="mt-5 h-3
+                     bg-slate-100
+                     skill-bar"
+            >
+
+              <div
+                class="h-full w-[80%]
+                       bg-gradient-to-r
+                       from-sky to-primary
+                       rounded-full"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Skill 6 -->
+
+          <div
+            class="cute-card reveal
+                   bg-white
+                   p-7 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-4xl">
+              🧠
+            </div>
+
+            <h3
+              class="mt-5 text-xl
+                     font-bold"
+            >
+              Problem Solving
+            </h3>
+
+            <p
+              class="mt-2 text-slate-500"
+            >
+              การคิดและแก้ไขปัญหา
+            </p>
+
+            <div
+              class="mt-5 h-3
+                     bg-slate-100
+                     skill-bar"
+            >
+
+              <div
+                class="h-full w-[85%]
+                       bg-gradient-to-r
+                       from-yellow to-pink
+                       rounded-full"
+              ></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section
+      id="projects"
+      class="py-24 bg-white"
+    >
+
+      <div
+        class="max-w-7xl mx-auto
+               px-5 lg:px-8"
+      >
+
+        <div class="text-center reveal">
+
+          <span
+            class="px-4 py-2
+                   rounded-full
+                   bg-pink-100
+                   text-pink-500
+                   text-sm font-bold"
+          >
+
+            MY PROJECTS
+
+          </span>
+
+
+          <h2
+            class="mt-5 text-4xl
+                   font-extrabold text-slate-800"
+          >
+
+            ผลงานและกิจกรรม 🌷
+
+          </h2>
+
+
+          <p
+            class="mt-4 text-slate-500"
+          >
+
+            สิ่งที่ฉันได้เรียนรู้และลงมือทำ
+
+          </p>
+
+        </div>
+
+
+        <!-- Project Grid -->
+
+        <div
+          class="mt-14
+                 grid sm:grid-cols-2
+                 lg:grid-cols-3 gap-7"
+        >
+
+
+          <!-- Project 1 -->
+
+          <article
+            class="cute-card reveal
+                   bg-white
+                   rounded-3xl
+                   overflow-hidden
+                   border border-purple-100
+                   shadow-sm"
+          >
+
+            <img
+              src="pic/IMG_5605.PNG"
+              alt="Project 1"
+              class="w-full aspect-[16/10] object-cover"
+            >
+
+            <div class="p-6">
+
+              <span
+                class="text-xs font-bold
+                       text-primary"
+              >
+                PROJECT 01
+              </span>
+
+              <h3
+                class="mt-2 text-xl
+                       font-bold"
+              >
+                โครงงานวิทยาศาสตร์
+              </h3>
+
+              <p
+                class="mt-3 text-sm
+                       text-slate-500
+                       leading-6"
+              >
+                ศึกษา ทดลอง เก็บข้อมูล
+                และสรุปผลจากการทดลอง
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Project 2 -->
+
+          <article
+            class="cute-card reveal
+                   bg-white rounded-3xl
+                   overflow-hidden
+                   border border-pink-100
+                   shadow-sm"
+          >
+
+            <img
+              src="pic/IMG_5162.PNG"
+              alt="Project 2"
+              class="w-full aspect-[16/10] object-cover"
+            >
+
+            <div class="p-6">
+
+              <span
+                class="text-xs font-bold
+                       text-pink-500"
+              >
+                PROJECT 02
+              </span>
+
+              <h3
+                class="mt-2 text-xl
+                       font-bold"
+              >
+                นำเสนอโครงงานในรูปแบบโปสเตอร์
+              </h3>
+
+              <p
+                class="mt-3 text-sm
+                       text-slate-500
+                       leading-6"
+              >
+                ฝึกคิด วิเคราะห์ และแก้ปัญหา
+                นำเสนอผลงานให้ผู้อื่นได้ฟัง
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Project 3 -->
+
+          <article
+            class="cute-card reveal
+                   bg-white rounded-3xl
+                   overflow-hidden
+                   border border-sky-100
+                   shadow-sm"
+          >
+
+            <img
+              src="pic/IMG_5669.PNG"
+              alt="Project 3"
+              class="w-full aspect-[16/10] object-cover"
+            >
+
+            <div class="p-6">
+
+              <span
+                class="text-xs font-bold
+                       text-sky-500"
+              >
+                PROJECT 03
+              </span>
+
+              <h3
+                class="mt-2 text-xl
+                       font-bold"
+              >
+                กิจกรรมการเข้าร่วมกับโรงเรียนเสริมทักษะเชิงสร้างสรรค์อาร์คกิ
+              </h3>
+
+              <p
+                class="mt-3 text-sm
+                       text-slate-500
+                       leading-6"
+              >
+                ศึกษาการใช้กระบวนการ Design Thinking
+                ในการแก้ปัญหาและสร้างสรรค์ผลงานใหม่ๆ
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Project 4 -->
+
+          <article
+            class="cute-card reveal
+                   bg-white rounded-3xl
+                   overflow-hidden
+                   border border-yellow-100
+                   shadow-sm"
+          >
+
+            <img
+              src="pic/20251110_103043.jpg"
+              alt="Project 4"
+              class="w-full aspect-[16/10] object-cover"
+            >
+
+            <div class="p-6">
+
+              <span
+                class="text-xs font-bold
+                       text-yellow-600"
+              >
+                PROJECT 04
+              </span>
+
+              <h3
+                class="mt-2 text-xl
+                       font-bold"
+              >
+                กิจกรรมการศึกษาดูงาน
+              </h3>
+
+              <p
+                class="mt-3 text-sm
+                       text-slate-500
+                       leading-6"
+              >
+                ได้เข้าร่วมกิจกรรมและเรียนรู้
+                ประสบการณ์ใหม่ ๆ แล้วนำมาประยุกต์ใช้ในชีวิตประจำวัน
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Project 5 -->
+
+          <article
+            class="cute-card reveal
+                   bg-white rounded-3xl
+                   overflow-hidden
+                   border border-green-100
+                   shadow-sm"
+          >
+
+            <img
+              src="pic/IMG_5673.JPG"
+              alt="Project 5"
+              class="w-full aspect-[16/10] object-cover"
+            >
+
+            <div class="p-6">
+
+              <span
+                class="text-xs font-bold
+                       text-green-500"
+              >
+                PROJECT 05
+              </span>
+
+              <h3
+                class="mt-2 text-xl
+                       font-bold"
+              >
+                เข้าร่วมกิจกรรมการแข่งขันศิลปหัตถกรรม รางวัลระดับเหรียญเงิน
+              </h3>
+
+              <p
+                class="mt-3 text-sm
+                       text-slate-500
+                       leading-6"
+              >
+                ได้เข้าร่วมกิจกรรมและพัฒนาทักษะความรู้ ได้ประสบการณ์ใหม่ๆ
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Project 6 -->
+
+          <article
+            class="cute-card reveal
+                   bg-white rounded-3xl
+                   overflow-hidden
+                   border border-purple-100
+                   shadow-sm"
+          >
+
+            <img
+              src="pic/IMG_5672.PNG"
+              alt="Project 6"
+              class="w-full aspect-[16/10] object-cover"
+            >
+
+            <div class="p-6">
+
+              <span
+                class="text-xs font-bold
+                       text-purple-500"
+              >
+                PROJECT 06
+              </span>
+
+              <h3
+                class="mt-2 text-xl
+                       font-bold"
+              >
+                ได้ทำ project การพัฒนาทักษะกระบวนการคิด Design Thinking
+              </h3>
+
+              <p
+                class="mt-3 text-sm
+                       text-slate-500
+                       leading-6"
+              >
+                พัฒนาความรู้และทักษะ
+                นำความรู้ที่ได้จากกระบวนการคิด Design Thinking มาประยุกต์ใช้ในชีวิตประจำวัน
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FUTURE GOAL
+    ====================================================== -->
+
+    <section
+      class="py-24
+             bg-gradient-to-r
+             from-primary
+             via-pink
+             to-sky
+             text-white"
+    >
+
+      <div
+        class="max-w-4xl mx-auto
+               px-5 text-center reveal"
+      >
+
+        <div class="text-5xl">
+          🌈
+        </div>
+
+
+        <h2
+          class="mt-5 text-4xl sm:text-5xl
+                 font-extrabold"
+        >
+
+          My Future Goal
+
+        </h2>
+
+
+        <p
+          class="mt-6 text-white/90
+                 leading-8 text-lg"
+        >
+
+          เราอยากพัฒนาตัวเองให้ดีขึ้นในทุก ๆ วัน
+          ได้เรียนรู้สิ่งใหม่ ๆ และทำตามความฝัน
+          พร้อมเก็บเกี่ยวประสบการณ์ที่มีค่า
+          เพื่อเติบโตเป็นคนที่สามารถสร้างประโยชน์
+          ให้กับคนรอบตัวและสังคมได้
+          และทำให้ความฝันของเราเป็นจริงในอนาคต
+
+        </p>
+
+
+        <div
+          class="mt-8 flex flex-wrap
+                 justify-center gap-3"
+        >
+
+          <span
+            class="px-5 py-2.5
+                   rounded-full
+                   bg-white/20"
+          >
+            Dream ✨
+          </span>
+
+          <span
+            class="px-5 py-2.5
+                   rounded-full
+                   bg-white/20"
+          >
+            Learn 📚
+          </span>
+
+          <span
+            class="px-5 py-2.5
+                   rounded-full
+                   bg-white/20"
+          >
+            Grow 🌱
+          </span>
+
+          <span
+            class="px-5 py-2.5
+                   rounded-full
+                   bg-white
+                   text-primary
+                   font-bold"
+          >
+            Believe in Yourself 💖
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      id="contact"
+      class="py-24 bg-[#FAF9FF]"
+    >
+
+      <div
+        class="max-w-5xl mx-auto
+               px-5 lg:px-8"
+      >
+
+        <div
+          class="text-center reveal"
+        >
+
+          <span
+            class="px-4 py-2
+                   rounded-full
+                   bg-sky-100
+                   text-sky-600
+                   text-sm font-bold"
+          >
+
+            CONTACT ME
+
+          </span>
+
+
+          <h2
+            class="mt-5 text-4xl
+                   font-extrabold"
+          >
+
+            ติดต่อฉัน 💌
+
+          </h2>
+
+        </div>
+
+
+        <div
+          class="mt-12
+                 grid sm:grid-cols-2
+                 gap-5"
+        >
+
+
+          <!-- Email -->
+
+          <a
+            href="ph"
+            class="cute-card reveal
+                   bg-white
+                   p-6 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-3xl">
+              📧
+            </div>
+
+            <p
+              class="mt-3 text-sm
+                     text-slate-400"
+            >
+              Email
+            </p>
+
+            <p
+              class="font-bold text-primary"
+            >
+              pawonwannarat.phi@pccpl.ac.th
+            </p>
+
+          </a>
+
+
+          <!-- Phone -->
+
+          <a
+            href="tel:0889188306"
+            class="cute-card reveal
+                   bg-white
+                   p-6 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-3xl">
+              📱
+            </div>
+
+            <p
+              class="mt-3 text-sm
+                     text-slate-400"
+            >
+              Phone
+            </p>
+
+            <p
+              class="font-bold text-primary"
+            >
+              088-9188-306
+            </p>
+
+          </a>
+
+
+          <!-- Instagram -->
+
+          <a
+            href="#"
+            class="cute-card reveal
+                   bg-white
+                   p-6 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-3xl">
+              📸
+            </div>
+
+            <p
+              class="mt-3 text-sm
+                     text-slate-400"
+            >
+              Instagram
+            </p>
+
+            <p
+              class="font-bold text-pink-500"
+            >
+              @2li0_09
+            </p>
+
+          </a>
+
+
+          <!-- GitHub -->
+
+          <a
+            href="#"
+            class="cute-card reveal
+                   bg-white
+                   p-6 rounded-3xl
+                   shadow-sm"
+          >
+
+            <div class="text-3xl">
+              💻
+            </div>
+
+            <p
+              class="mt-3 text-sm
+                     text-slate-400"
+            >
+              GitHub
+            </p>
+
+            <p
+              class="font-bold text-primary"
+            >
+              github.com/pp-202568
+            </p>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer
+    class="bg-slate-900
+           text-white py-10"
+  >
+
+    <div
+      class="max-w-7xl mx-auto
+             px-5 text-center"
+    >
+
+      <div
+        class="w-12 h-12 mx-auto
+               rounded-2xl
+               bg-gradient-to-br
+               from-primary to-pink
+               flex items-center
+               justify-center
+               font-extrabold"
+      >
+
+        ME
+
+      </div>
+
+
+      <p class="mt-4 font-bold">
+        My Student Portfolio ✨
+      </p>
+
+
+      <p
+        class="mt-2 text-sm
+               text-slate-400"
+      >
+
+        Keep learning, keep growing,
+        and keep believing in yourself. 💖
+
+      </p>
+
+
+      <p
+        class="mt-5 text-xs
+               text-slate-500"
+      >
+
+        Copyright © 2026 [ด.ญ.ปวรวรรณรัตน์ ไพรบำรุง]
+
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    // =========================
+    // Mobile Menu
+    // =========================
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    const menuIcon =
+      document.getElementById("menuIcon");
+
+
+    menuBtn.addEventListener("click", function () {
+
+      const isOpen =
+        !mobileMenu.classList.contains("hidden");
+
+      mobileMenu.classList.toggle("hidden");
+
+
+      if (!isOpen) {
+
+        menuIcon.setAttribute(
+          "d",
+          "M6 18L18 6M6 6l12 12"
+        );
+
+      } else {
+
+        menuIcon.setAttribute(
+          "d",
+          "M4 6h16M4 12h16M4 18h16"
+        );
+
+      }
+
+    });
+
+
+    // =========================
+    // Close Mobile Menu
+    // =========================
+
+    document
+      .querySelectorAll(".mobile-link")
+      .forEach(function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            mobileMenu.classList.add("hidden");
+
+            menuIcon.setAttribute(
+              "d",
+              "M4 6h16M4 12h16M4 18h16"
+            );
+
+          }
+        );
+
+      });
+
+
+    // =========================
+    // Navbar Scroll
+    // =========================
+
+    const navbar =
+      document.getElementById("navbar");
+
+
+    window.addEventListener(
+      "scroll",
+      function() {
+
+        if (window.scrollY > 30) {
+
+          navbar.classList.add(
+            "nav-scrolled"
+          );
+
+        } else {
+
+          navbar.classList.remove(
+            "nav-scrolled"
+          );
+
+        }
+
+      }
+    );
+
+
+    // =========================
+    // Reveal Animation
+    // =========================
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const observer =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(
+            function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "show"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(
+      function(element) {
+
+        observer.observe(element);
+
+      }
+    );
+
+
+  </script>
+
+</body>
+</html>
